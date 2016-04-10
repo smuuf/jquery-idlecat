@@ -46,10 +46,21 @@ var instance = $('#status').idleCat({
 	// See below for more options...
 	
 });
+
+// Log current state from idleCat attached to that jQuery object.
+window.setInterval(function() {
+	console.log(instance.getState());
+}, 1000)
 ```
 
 ### Options
-***idleCat*** is configured using a config object passed into the plugin's initializer.
+***idleCat*** is configured using a config object passed into the plugin's initializer:
+
+```js
+$('#status').idleCat({ ... });
+```
+
+#### Available options:
 
 ##### interval
   - Default: `20`
