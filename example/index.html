@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+		<script src="../build/jquery.idleCat.min.js"></script>
+		<style>
+
+			#status {
+				background: #ccc;
+				padding: 10px;
+			}
+
+			#status.active {
+				background: #6c6;
+			}
+
+		</style>
+	</head>
+	<body>
+
+		<h1>idleCat example.</h1>
+		<p>Move the mouse to exhibit your presence.</p>
+
+		<p id="status">...</p>
+
+		<script>
+
+			// Create instance of idleCat.
+			var instance = $('#status').idleCat({
+				interval: 2,
+				release: 2,
+				state: 'idle',
+				activeCallback: function() {
+					$(this).addClass('active');
+				},
+				idleCallback: function(element) {
+					$(this).removeClass('active');
+				},
+			});
+
+			// Report current state. Unimportant for idleCat to work.
+			$('#status').html(instance.getState())
+			window.setInterval(function() {
+				$('#status').html(instance.getState());
+			}, 500);
+
+		</script>
+
+	<body>
+</html>
