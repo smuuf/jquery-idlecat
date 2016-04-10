@@ -1,0 +1,37 @@
+{
+	"name": "smuuf.idleCat",
+	"version": "0.1.0",
+	"description": "Simple and lightweight jQuery plugin for user-presence detection.",
+	"main": "jquery.idleCat.min.js",
+	"directories": {
+		"example": "example"
+	},
+	"dependencies": {},
+	"devDependencies": {
+		"grunt": "^1.0.1",
+		"grunt-contrib-uglify": "^1.0.1",
+		"grunt-contrib-watch": "^1.0.0"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/smuuf/jquery-idlecat.git"
+	},
+	"giturl": "https://github.com/smuuf/jquery-idlecat/",
+	"author": "Premysl Karbula",
+	"license": "MIT",
+	"keywords": [
+		"jquery-plugin",
+		"ecosystem:jquery",
+		"idle",
+		"activity",
+		"detection",
+		"browser"
+	],
+	"bugs": {
+		"url": "https://github.com/smuuf/jquery-idlecat/issues"
+	},
+	"homepage": "https://github.com/smuuf/jquery-idlecat#readme"
+}
