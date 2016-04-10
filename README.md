@@ -1,2 +1,3 @@
-# jquery-idlecat
-SImple and lightweight jQuery plugin for user-presence detection.
+# idleCat
+
+Simple and lightweight jQuery plugin for user-presence detection.
