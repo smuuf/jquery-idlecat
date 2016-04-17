@@ -14,7 +14,7 @@ As this is a jQuery plugin, you need jQuery (idleCat was tested on jQuery `1.12.
 ...
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 <script src="./js/jquery.idleCat.min.js"></script>
-...	
+...
 ```
 
 ## Usage
@@ -22,29 +22,29 @@ As this is a jQuery plugin, you need jQuery (idleCat was tested on jQuery `1.12.
 ```js
 // Create an instance of idleCat on a jQuery object.
 var instance = $('#status').idleCat({
-	
+
 	// Number of seconds to wait between two scans of user activity.
-	interval: 2, 
-	
+	interval: 2,
+
 	// How many seconds to hold the activity from the moment of knowing there was not any activity.
 	release: 2,
-	
+
 	// The default state of the idleness (use 'active' or 'idle').
 	state: 'idle',
-	
+
 	// Callback fired after the discovery of user activity on the page.
-	activeCallback: function() { 
+	activeCallback: function() {
 		$(this).addClass('active');
 	},
-	
+
 	// Callback fired after the discovery of used idleness on the page.
 	// (+ number of seconds defined in the 'release' property)
 	idleCallback: function(element) {
-		$(this).removeClass('active'); 
+		$(this).removeClass('active');
 	},
-	
+
 	// See below for more options...
-	
+
 });
 
 // Log current state from idleCat attached to that jQuery object.
@@ -90,4 +90,7 @@ $('#status').idleCat({ ... });
 ##### idleCallback
   - Default: `function() {}`
   - *Callback* fired after the discovery of used idleness on the page (+ number of seconds defined in the 'release' property.)
-  - The element that has *this* instance of ***idleCat*** attached to it will be passed as the only argument of the callback.- 
+  - The element that has *this* instance of ***idleCat*** attached to it will be passed as the only argument of the callback.-
+
+### Keywords
+`javascript`, `jquery`, `idle time`, `user presence`, `user activity`, `user inactivity`, `user idle`, `inactivity`, `indication`
