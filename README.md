@@ -64,15 +64,11 @@ $('#status').idleCat({ ... });
 
 ##### interval
   - Default: `20`
-  - Number of seconds to wait between two scans of user activity.
+  - *Number of seconds* to wait between two scans of user activity.
 
 ##### release
   - Default: `360`
   - *Number of seconds* to hold the activity from the moment of knowing there was not any activity.
-
-##### interval
-  - Default: `20`
-  - *Number of seconds* to wait between two scans of user activity.
 
 ##### state
   - Default: `active`
