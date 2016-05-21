@@ -4,7 +4,7 @@
  */
 ;(function($, window, document) {
 
-	var pluginName = 'smuuf.idleCat';
+	var pluginName = 'idleCat';
 	var defaults = {
 
 		// Number of seconds to wait between two scans of user activity.
@@ -70,8 +70,6 @@
 	};
 
 	Plugin.prototype.handleInterval = function() {
-
-		self = this;
 
 		// Set current state
 		this.handleDetection();

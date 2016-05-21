@@ -1,8 +1,8 @@
 {
-	"name": "smuuf.idleCat",
-	"version": "0.1.0",
+	"name": "@smuuf/idleCat",
+	"version": "0.1.1",
 	"description": "Simple and lightweight jQuery plugin for user-presence detection.",
-	"main": "jquery.idleCat.min.js",
+	"main": "build/jquery.idleCat.min.js",
 	"directories": {
 		"example": "example"
 	},
@@ -25,10 +25,15 @@
 	"keywords": [
 		"jquery-plugin",
 		"ecosystem:jquery",
+		"user",
+		"presence",
 		"idle",
 		"activity",
 		"detection",
-		"browser"
+		"browser",
+		"idleness",
+		"present",
+		"inactivity"
 	],
 	"bugs": {
 		"url": "https://github.com/smuuf/jquery-idlecat/issues"
