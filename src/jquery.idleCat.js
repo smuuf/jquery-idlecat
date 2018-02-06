@@ -34,8 +34,10 @@
 
 	var mouseX = null;
 	var mouseY = null;
+    var lastKeypress = null;
 	var oldMouseX = null;
 	var oldMouseY = null;
+    var oldLastKeypress = null;
 
 	// Constructor
 	function Plugin(element, options) {
@@ -64,6 +66,15 @@
 				this.options.idleCallback.call(this.e);
 			}
 		}
+
+        jqDocument.one("mousemove", function (event) {
+            mouseX = event.pageX;
+            mouseY = event.pageY;
+        });
+
+        jqDocument.on("keypress", function (event) {
+            lastKeypress = (new Date).getTime();
+        });
 
 		this.handleInterval();
 
@@ -128,16 +139,12 @@
 
 	Plugin.prototype.detectMovement = function() {
 
-		jqDocument.one("mousemove", function (event) {
-			mouseX = event.pageX;
-			mouseY = event.pageY;
-		});
-
 		//console.log(mouseX, mouseY);
-		var movement = (mouseX != oldMouseX) || (mouseY != oldMouseY);
+		var movement = (mouseX != oldMouseX) || (mouseY != oldMouseY) || (lastKeypress != oldLastKeypress);
 
 		oldMouseX = mouseX;
 		oldMouseY = mouseY;
+        oldLastKeypress = lastKeypress;
 
 		return movement;
 
